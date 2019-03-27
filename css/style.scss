@@ -1,0 +1,20 @@
+@import "palette";
+@import "reset";
+
+body {
+    background: black;
+
+    .container {
+        header {
+            h1 {}
+
+            nav {
+                a {}
+            }
+        }
+
+        main {
+            section {}
+        }
+    }
+}
