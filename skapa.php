@@ -22,7 +22,16 @@
         </header>
 
         <main>
-            <section class="registrera"></section>
+            <section class="registrera">
+                <form action="#" method="post">
+                    
+                    <input placeholder="Gmail" type="text" name="gmail">
+                    <input placeholder="Förnamn" type="text" name="fnamn">
+                    <input placeholder="Efternamn" type="text" name="enamn">
+                    <input placeholder="Lösenord" type="password" name="losen">
+                    
+                    <button>Registrera</button></form>
+            </section>
         </main>
     </div>
 </body>

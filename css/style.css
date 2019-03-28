@@ -36,7 +36,22 @@ font-family: 'Noto Sans', sans-serif;
 body .container {
   width: 1280px;
   height: 800px;
-  background-image: url("../bilder/bakgrund.png");
+  background-image: url("../bilder/bild.jpg");
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .container header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 15px 15px 15px;
 }
 
 body .container header h1 {
@@ -46,8 +61,16 @@ body .container header h1 {
 }
 
 body .container header nav {
-  width: 677px;
   height: 63px;
+  border: 1px solid white;
+  border-radius: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .container header nav a {
@@ -62,12 +85,18 @@ body .container header nav a.aktiv {
   font-size: 30px;
 }
 
-body .container main section .dropdown {
+body .container main {
+  /* Hem css */
+  /* Skapa css */
+  /* Logga css */
+}
+
+body .container main .drop .dropdown {
   position: relative;
   display: inline-block;
 }
 
-body .container main section .dropbtn {
+body .container main .drop .dropbtn {
   background-color: #1c3030;
   color: white;
   padding: 16px;
@@ -75,7 +104,7 @@ body .container main section .dropbtn {
   border: none;
 }
 
-body .container main section .dropdown-content {
+body .container main .drop .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -85,29 +114,56 @@ body .container main section .dropdown-content {
   z-index: 1;
 }
 
-body .container main section .dropdown-content a {
+body .container main .drop .dropdown-content a {
   color: #2b6181;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-body .container main section .dropdown-content a:hover {
-  background-color: #485b5b;
+body .container main .drop .dropdown-content a:hover {
+  background-color: #d9c1b0;
 }
 
-body .container main section .dropdown:hover .dropdown-content {
+body .container main .drop .dropdown:hover .dropdown-content {
   display: block;
 }
 
-body .container main section .dropdown:hover .dropbtn {
-  background-color: #485b5b;
+body .container main .drop .dropdown:hover .dropbtn {
+  background-color: #d9c1b0;
 }
 
-body .container main section a {
+body .container main .registrera {
+  margin: 100px auto;
+  width: 300px;
+  text-align: center;
+}
+
+body .container main .registrera button {
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100px;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px;
+  background-color: #1c3030;
   color: #d9c1b0;
-  text-decoration: none;
+}
+
+body .container main .registrera input {
+  margin-top: 30px;
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px;
+  border: 1px solid #1c3030;
+  border-radius: 10px;
+  width: 100%;
+}
+
+body .container main .loggaIn button {
+  border-radius: 5px;
+}
+
+body .container main .loggaIn input {
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

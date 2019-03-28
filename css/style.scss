@@ -13,9 +13,18 @@ body {
     .container {
         width: 1280px;
         height: 800px;
-        background-image: url("../bilder/bakgrund.png");
+        background-image: url("../bilder/bild.jpg");
+        background-size: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 
         header {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 15px 15px 15px 15px;
+
             h1 {
                 font-family: 'Open Sans', sans-serif;
                 font-size: 44px;
@@ -23,8 +32,12 @@ body {
             }
 
             nav {
-                width: 677px;
                 height: 63px;
+                border: 1px solid white;
+                border-radius: 30px;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                align-items: center;
 
                 a {
                     text-decoration: none;
@@ -45,7 +58,9 @@ body {
 
             section {}
 
-            section {
+            /* Hem css */
+            .drop {
+
                 .dropdown {
                     position: relative;
                     display: inline-block;
@@ -76,7 +91,7 @@ body {
                 }
 
                 .dropdown-content a:hover {
-                    background-color: $color3;
+                    background-color: $color4;
                 }
 
                 .dropdown:hover .dropdown-content {
@@ -84,14 +99,46 @@ body {
                 }
 
                 .dropdown:hover .dropbtn {
-                    background-color: $color3;
+                    background-color: $color4;
+                }
+            }
+
+            /* Skapa css */
+            .registrera {
+                margin: 100px auto;
+                width: 300px;
+                text-align: center;
+
+                button {
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    width: 100px;
+                    font-family: 'Noto Sans', sans-serif;
+                    background-color: $color1;
+                    color: $color4;
                 }
 
-                a {
+                input {
+                    margin-top: 30px;
+                    display: block;
                     font-family: 'Noto Sans', sans-serif;
-                    font-size: 16px;
-                    color: $color4;
-                    text-decoration: none;
+                    padding: 10px;
+                    border: 1px solid $color1;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+            }
+
+            /* Logga css */
+            .loggaIn {
+
+                button {
+                    border-radius: 5px;
+                }
+
+                input {
+                    display: block;
+                    font-family: 'Noto Sans', sans-serif;
                 }
             }
         }
