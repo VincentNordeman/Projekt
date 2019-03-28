@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Startsida</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -14,19 +14,19 @@
         <header>
             <h1>Skol Reviews</h1>
             <nav>
-                <a href="#">Startsida</a>
-                <a href="#">Favorit Restauranger</a>
-                <a href="#">Skapa Konto</a>
-                <a href="#">Logga in</a>
+                <a class="aktiv" href="#">Startsida</a>
+                <a href="favo.php">Favorit Restauranger</a>
+                <a href="skapa.php">Skapa Konto</a>
+                <a href="logga.php">Logga in</a>
             </nav>
         </header>
 
         <main>
             <section class="karta"></section>
             <section class="review"></section>
-            <section class="dropdown">
-                <div class="drop">
-                    <button class="dropbtn">Dropdown</button>
+            <section class="drop">
+                <div class="dropdown">
+                    <button class="dropbtn">Restauranger</button>
                     <div class="dropdown-content">
                         <a href="#">Mamma Mia</a>
                         <a href="#">La Grande</a>

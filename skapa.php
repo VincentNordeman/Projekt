@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Skapa användare</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -14,10 +14,10 @@
         <header>
             <h1>Skol Reviews</h1>
             <nav>
-                <a href="#">Startsida</a>
-                <a href="#">Favorit Restauranger</a>
-                <a href="#">Skapa Konto</a>
-                <a href="#">Logga in</a>
+                <a href="hem.php">Startsida</a>
+                <a href="favo.php">Favorit Restauranger</a>
+                <a class="aktiv" href="#">Skapa Konto</a>
+                <a href="logga.php">Logga in</a>
             </nav>
         </header>
 
