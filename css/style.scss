@@ -54,9 +54,10 @@ body {
         }
 
         main {
-            section {}
+            display: grid;
+            grid-template-columns: auto auto auto;
 
-            section {}
+            .col3 {}
 
             /* Hem css */
             .drop {
@@ -72,13 +73,14 @@ body {
                     padding: 16px;
                     font-size: 16px;
                     border: none;
+                    width: 130px;
                 }
 
                 .dropdown-content {
                     display: none;
                     position: absolute;
                     background-color: #f1f1f1;
-                    min-width: 160px;
+                    min-width: 130px;
                     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     z-index: 1;
                 }
@@ -131,14 +133,27 @@ body {
 
             /* Logga css */
             .loggaIn {
+                margin: 100px auto;
+                width: 300px;
+                text-align: center;
 
                 button {
+                    margin-top: 10px;
                     border-radius: 5px;
+                    width: 100px;
+                    font-family: 'Noto Sans', sans-serif;
+                    background-color: $color1;
+                    color: $color4;
                 }
 
                 input {
+                    margin-top: 30px;
                     display: block;
                     font-family: 'Noto Sans', sans-serif;
+                    padding: 10px;
+                    border: 1px solid $color1;
+                    border-radius: 10px;
+                    width: 100%;
                 }
             }
         }

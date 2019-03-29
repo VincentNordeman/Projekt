@@ -22,8 +22,12 @@
         </header>
 
         <main>
-            <section class="karta"></section>
-            <section class="review"></section>
+            <section class="col3">
+                <img src="./bilder/karta.png" alt="">
+            </section>
+            <section class="col3">
+                <img src="./bilder/rev.png" alt="">
+            </section>
             <section class="drop">
                 <div class="dropdown">
                     <button class="dropbtn">Restauranger</button>
