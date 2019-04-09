@@ -41,6 +41,9 @@ body .container {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  /* Favo css */
+  /* Skapa css */
+  /* Logga css */
 }
 
 body .container header {
@@ -85,22 +88,21 @@ body .container header nav a.aktiv {
   font-size: 30px;
 }
 
-body .container main {
+body .container main.hem {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
+  margin: 50px;
   /* Hem css */
-  /* Skapa css */
-  /* Logga css */
 }
 
-body .container main .drop .dropdown {
+body .container main.hem .drop .dropdown {
   position: relative;
   display: inline-block;
 }
 
-body .container main .drop .dropbtn {
+body .container main.hem .drop .dropbtn {
   background-color: #1c3030;
   color: white;
   padding: 16px;
@@ -109,7 +111,7 @@ body .container main .drop .dropbtn {
   width: 130px;
 }
 
-body .container main .drop .dropdown-content {
+body .container main.hem .drop .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -119,32 +121,46 @@ body .container main .drop .dropdown-content {
   z-index: 1;
 }
 
-body .container main .drop .dropdown-content a {
+body .container main.hem .drop .dropdown-content a {
   color: #2b6181;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-body .container main .drop .dropdown-content a:hover {
+body .container main.hem .drop .dropdown-content a:hover {
   background-color: #d9c1b0;
 }
 
-body .container main .drop .dropdown:hover .dropdown-content {
+body .container main.hem .drop .dropdown:hover .dropdown-content {
   display: block;
 }
 
-body .container main .drop .dropdown:hover .dropbtn {
+body .container main.hem .drop .dropdown:hover .dropbtn {
   background-color: #d9c1b0;
 }
 
-body .container main .registrera {
+body .container main.favoMain {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  margin: 50px;
+}
+
+body .container main.favoMain li {
+  color: #d9c1b0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+body .container main.registrera form {
   margin: 100px auto;
   width: 300px;
   text-align: center;
 }
 
-body .container main .registrera button {
+body .container main.registrera form button {
   margin-top: 10px;
   border-radius: 5px;
   width: 100px;
@@ -153,7 +169,7 @@ body .container main .registrera button {
   color: #d9c1b0;
 }
 
-body .container main .registrera input {
+body .container main.registrera form input {
   margin-top: 30px;
   display: block;
   font-family: 'Noto Sans', sans-serif;
@@ -163,13 +179,13 @@ body .container main .registrera input {
   width: 100%;
 }
 
-body .container main .loggaIn {
+body .container main.loggaIn form {
   margin: 100px auto;
   width: 300px;
   text-align: center;
 }
 
-body .container main .loggaIn button {
+body .container main.loggaIn form button {
   margin-top: 10px;
   border-radius: 5px;
   width: 100px;
@@ -178,7 +194,7 @@ body .container main .loggaIn button {
   color: #d9c1b0;
 }
 
-body .container main .loggaIn input {
+body .container main.loggaIn form input {
   margin-top: 30px;
   display: block;
   font-family: 'Noto Sans', sans-serif;

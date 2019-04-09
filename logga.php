@@ -21,15 +21,14 @@
             </nav>
         </header>
 
-        <main>
-            <section class="loggaIn">
-                <form action="#" method="post">
-                    <label for=""></label>
-                    <input placeholder="Gmail" type="text" name="gmail">
-                    <label for=""></label>
-                    <input placeholder="Lösenord" type="password" name="losen">
-                    <button>Logga in</button></form>
-            </section>
+        <main class="loggaIn">
+            <form action="#" method="post">
+                <label for=""></label>
+                <input placeholder="Gmail" type="text" name="gmail">
+                <label for=""></label>
+                <input placeholder="Lösenord" type="password" name="losen">
+                <button>Logga in</button>
+            </form>
         </main>
     </div>
 </body>

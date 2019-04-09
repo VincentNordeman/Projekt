@@ -21,7 +21,7 @@
             </nav>
         </header>
 
-        <main>
+        <main class="hem">
             <section class="col3">
                 <img src="./bilder/karta.png" alt="">
             </section>

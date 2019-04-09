@@ -53,9 +53,10 @@ body {
             }
         }
 
-        main {
+        main.hem {
             display: grid;
             grid-template-columns: auto auto auto;
+            margin: 50px;
 
             .col3 {}
 
@@ -104,9 +105,25 @@ body {
                     background-color: $color4;
                 }
             }
+        }
 
-            /* Skapa css */
-            .registrera {
+        /* Favo css */
+        main.favoMain {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 50px;
+
+            li {
+                color: $color4;
+                list-style-type: none;
+                font-size: 20px;
+            }
+        }
+
+        /* Skapa css */
+        main.registrera {
+
+            form {
                 margin: 100px auto;
                 width: 300px;
                 text-align: center;
@@ -130,9 +147,12 @@ body {
                     width: 100%;
                 }
             }
+        }
 
-            /* Logga css */
-            .loggaIn {
+        /* Logga css */
+        main.loggaIn {
+
+            form {
                 margin: 100px auto;
                 width: 300px;
                 text-align: center;

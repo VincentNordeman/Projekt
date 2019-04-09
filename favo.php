@@ -21,9 +21,17 @@
             </nav>
         </header>
 
-        <main>
-            <section class="karta"></section>
-            <section class="favoLista"></section>
+        <main class="favoMain">
+            <section class="karta">
+                <img src="./bilder/karta.png" alt="">
+            </section>
+            <section class="favoLista">
+                <ul>
+                    <li>Grande</li>
+                    <li>Mamma Mia</li>
+                    <li>Subway</li>
+                </ul>
+            </section>
         </main>
     </div>
 </body>
