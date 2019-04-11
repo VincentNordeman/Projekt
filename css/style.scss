@@ -110,13 +110,38 @@ body {
         /* Favo css */
         main.favoMain {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: auto auto auto;
             margin: 50px;
 
             li {
                 color: $color4;
                 list-style-type: none;
                 font-size: 20px;
+            }
+
+            form {
+                margin: 100px auto;
+                width: 300px;
+                text-align: center;
+
+                button {
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    width: 100px;
+                    font-family: 'Noto Sans', sans-serif;
+                    background-color: $color1;
+                    color: $color4;
+                }
+
+                input {
+                    margin-top: 30px;
+                    display: block;
+                    font-family: 'Noto Sans', sans-serif;
+                    padding: 10px;
+                    border: 1px solid $color1;
+                    border-radius: 10px;
+                    width: 100%;
+                }
             }
         }
 

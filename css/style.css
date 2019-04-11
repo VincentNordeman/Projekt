@@ -143,8 +143,8 @@ body .container main.hem .drop .dropdown:hover .dropbtn {
 body .container main.favoMain {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   margin: 50px;
 }
 
@@ -152,6 +152,31 @@ body .container main.favoMain li {
   color: #d9c1b0;
   list-style-type: none;
   font-size: 20px;
+}
+
+body .container main.favoMain form {
+  margin: 100px auto;
+  width: 300px;
+  text-align: center;
+}
+
+body .container main.favoMain form button {
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100px;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #1c3030;
+  color: #d9c1b0;
+}
+
+body .container main.favoMain form input {
+  margin-top: 30px;
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px;
+  border: 1px solid #1c3030;
+  border-radius: 10px;
+  width: 100%;
 }
 
 body .container main.registrera form {

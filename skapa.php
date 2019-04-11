@@ -6,10 +6,10 @@
  * @license    PHP CC
  */
 
-error_reporting(E_ALL);
-ini_set("isplay_errors", 1);
+/* error_reporting(E_ALL);
+ini_set("isplay_errors", 1); */
 
-include_once "./config-db.php";
+include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +37,18 @@ include_once "./config-db.php";
 
         <main class="registrera">
             <form action="#" method="post">
-                <input placeholder="Gmail" type="text" name="gmail">
-                <input placeholder="Förnamn" type="text" name="fnamn">
-                <input placeholder="Efternamn" type="text" name="enamn">
-                <input placeholder="Lösenord" type="password" name="losen">
+                <input id="gmail" placeholder="Gmail" type="text" name="gmail" required>
+                <input id="fnamn" placeholder="Förnamn" type="text" name="fnamn" required>
+                <input id="enamn" placeholder="Efternamn" type="text" name="enamn" required>
+                <input id="losen" placeholder="Lösenord" type="password" name="losen" required>
+                <input id="ulosen" placeholder="Upprepa lösenord" type="password" required>
                 <button>Registrera</button>
             </form>
+
             <?php
 /* Ta emot data från form och lagra i tabellen. */
 if (isset($_POST["gmail"]) && isset($_POST["fnamn"]) && isset($_POST["enamn"]) && isset($_POST["losen"])) {
+
     /* Skydda mot farligheter */
     $gmail = filter_input(INPUT_POST, "gmail", FILTER_SANITIZE_STRING);
     $fnamn = filter_input(INPUT_POST, "fnamn", FILTER_SANITIZE_STRING);
@@ -53,10 +56,9 @@ if (isset($_POST["gmail"]) && isset($_POST["fnamn"]) && isset($_POST["enamn"]) &
     $losen = filter_input(INPUT_POST, "losen", FILTER_SANITIZE_STRING);
 
     /* Logga in på databasen och skapa en anslutning */
-
     $conn = new mysqli($hostname, $user, $password, $database);
 
-    /* Kolla om vi har en fungerane anslutning */
+    /* Kolla om vi har en fungerande anslutning */
     if ($conn->connect_error) {
         die("Kunde inte ansluta till databasen: " . $conn->connect_error);
     }
@@ -70,12 +72,17 @@ if (isset($_POST["gmail"]) && isset($_POST["fnamn"]) && isset($_POST["enamn"]) &
 
     /* Kunde sql-satsen köras */
     if (!$result) {
-        die("Något blev fel sql-satsen; " . $conn->connect_error);
+        die("Något blev fel sql-satsen; " . $conn->error);
+    } else {
+        /* Alert när man lyckats skapa ett konto */
+        echo "<script>alert('Klappat & klart!')</script>";
     }
 }
 ?>
+
         </main>
     </div>
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
