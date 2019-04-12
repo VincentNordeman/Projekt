@@ -12,6 +12,9 @@ ini_set("isplay_errors", 1); */
 include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
 
 session_start();
+if (!isset($_SESSION["loggedin"])) {
+    $_SESSION["loggedin"] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +36,7 @@ session_start();
                 <a href="hem.php">Startsida</a>
                 <a href="favo.php">Favorit Restauranger</a>
                 <a href="skapa.php">Skapa Konto</a>
-                <a class="aktiv" href="#">Logga in</a>
+                <?php include_once "./includes/loggedin.inc.php";?>
             </nav>
         </header>
 
@@ -74,7 +77,7 @@ if (isset($_POST["gmail"]) && isset($_POST["losen"])) {
         /* Nu ska vi jämföra lösenordet med hashen */
         if (password_verify($losen, $user["hash"])) {
             $_SESSION["loggedin"] = true;
-            $_SESSION["anamn"] = $user["$gmail"];
+            $_SESSION["anamn"] = $user["gmail"];
         } else {
             /* Alert när man lyckats skapa ett konto */
             echo "<script>alert(Fel lösenord! Försök igen!')</script>";

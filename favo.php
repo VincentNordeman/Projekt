@@ -12,6 +12,9 @@ ini_set("isplay_errors", 1); */
 include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
 
 session_start();
+if (!isset($_SESSION["loggedin"])) {
+    $_SESSION["loggedin"] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +36,7 @@ session_start();
                 <a href="hem.php">Startsida</a>
                 <a class="aktiv" href="#">Favorit Restauranger</a>
                 <a href="skapa.php">Skapa Konto</a>
-                <a href="logga.php">Logga in</a>
+                <?php include_once "./includes/loggedin.inc.php";?>
             </nav>
         </header>
 

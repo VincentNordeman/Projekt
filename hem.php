@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["loggedin"])) {
+    $_SESSION["loggedin"] = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -17,7 +26,7 @@
                 <a class="aktiv" href="#">Startsida</a>
                 <a href="favo.php">Favorit Restauranger</a>
                 <a href="skapa.php">Skapa Konto</a>
-                <a href="logga.php">Logga in</a>
+                <?php include_once "./includes/loggedin.inc.php";?>
             </nav>
         </header>
 
