@@ -172,6 +172,17 @@ body {
                     width: 100%;
                 }
             }
+
+            .bluebox {
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 18px;
+                text-align: center;
+                color: white;
+                background-color: $color3;
+                width: 200px;
+                margin: auto;
+                border-radius: 10px;
+            }
         }
 
         /* Logga css */

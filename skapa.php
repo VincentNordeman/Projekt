@@ -25,6 +25,7 @@ if (!isset($_SESSION["loggedin"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Skapa användare</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body>
@@ -42,9 +43,9 @@ if (!isset($_SESSION["loggedin"])) {
 
         <main class="registrera">
             <form action="#" method="post">
-                <input id="gmail" placeholder="Gmail" type="text" name="gmail" required>
-                <input id="fnamn" placeholder="Förnamn" type="text" name="fnamn" required>
-                <input id="enamn" placeholder="Efternamn" type="text" name="enamn" required>
+                <input id="gmail" placeholder="Gmail" type="text" name="gmail" required require value="<?php echo isset($_POST['gmail']) ? $_POST['gmail'] : '' ?>">
+                <input id="fnamn" placeholder="Förnamn" type="text" name="fnamn" required require value="<?php echo isset($_POST['fnamn']) ? $_POST['fnamn'] : '' ?>">
+                <input id="enamn" placeholder="Efternamn" type="text" name="enamn" required require value="<?php echo isset($_POST['enamn']) ? $_POST['enamn'] : '' ?>">
                 <input id="losen" placeholder="Lösenord" type="password" name="losen" required>
                 <input id="ulosen" placeholder="Upprepa lösenord" type="password" required>
                 <button>Registrera</button>
@@ -52,7 +53,7 @@ if (!isset($_SESSION["loggedin"])) {
 
             <?php
 /* Ta emot data från form och lagra i tabellen. */
-if (isset($_POST["gmail"]) && isset($_POST["fnamn"]) && isset($_POST["enamn"]) && isset($_POST["losen"])) {
+if (isset($_POST["gmail"], $_POST["fnamn"], $_POST["enamn"], $_POST["losen"])) {
 
     /* Skydda mot farligheter */
     $gmail = filter_input(INPUT_POST, "gmail", FILTER_SANITIZE_STRING);
@@ -71,16 +72,24 @@ if (isset($_POST["gmail"]) && isset($_POST["fnamn"]) && isset($_POST["enamn"]) &
     /* Räkna hashet på lösenordet */
     $hash = password_hash($losen, PASSWORD_DEFAULT);
 
-    /* Anslutningen fungerar. Nu skjuter vi in data i tabellen. */
-    $sql = "INSERT INTO admin (gmail, fnamn, enamn, hash) VALUES ('$gmail', '$fnamn', '$enamn', '$hash')";
-    $result = $conn->query($sql);
-
-    /* Kunde sql-satsen köras */
-    if (!$result) {
-        die("Något blev fel sql-satsen; " . $conn->error);
+    $check = "SELECT * FROM admin WHERE gmail = '$gmail'";
+    $rs = mysqli_query($conn, $check);
+    $data = mysqli_fetch_array($rs, MYSQLI_NUM);
+    if ($data[0] > 1) {
+        echo "<p class=\"animated bluebox jackInTheBox\">Gmail finns redan!</p>";
     } else {
-        /* Alert när man lyckats skapa ett konto */
-        echo "<script>alert('Klappat & klart!')</script>";
+
+        /* Anslutningen fungerar. Nu skjuter vi in data i tabellen. */
+        $sql = "INSERT INTO admin (gmail, fnamn, enamn, hash) VALUES ('$gmail', '$fnamn', '$enamn', '$hash')";
+        $result = $conn->query($sql);
+
+        /* Kunde sql-satsen köras */
+        if (!$result) {
+            die("Något blev fel sql-satsen; " . $conn->error);
+        } else {
+            /* Alert när man lyckats skapa ett konto */
+            echo "<p class=\"animated bluebox heartBeat\">Klappat och klart!</p>";
+        }
     }
 }
 ?>

@@ -204,6 +204,17 @@ body .container main.registrera form input {
   width: 100%;
 }
 
+body .container main.registrera .bluebox {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  background-color: #485b5b;
+  width: 200px;
+  margin: auto;
+  border-radius: 10px;
+}
+
 body .container main.loggaIn form {
   margin: 100px auto;
   width: 300px;

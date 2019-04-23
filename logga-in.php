@@ -42,7 +42,7 @@ if (!isset($_SESSION["loggedin"])) {
 
         <main class="loggaIn">
             <form action="#" method="post">
-                <input id="gmail" placeholder="Gmail" type="text" name="gmail">
+                <input id="gmail" placeholder="Gmail" type="text" name="gmail" require value="<?php echo isset($_POST['gmail']) ? $_POST['gmail'] : '' ?> ">
                 <input id="losen" placeholder="Lösenord" type="password" name="losen">
                 <button>Logga in</button>
             </form>
