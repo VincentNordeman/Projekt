@@ -25,6 +25,7 @@ if (!isset($_SESSION["loggedin"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Favorit</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mapbox.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@ if (!isset($_SESSION["loggedin"])) {
 
         <main class="favoMain">
             <section class="karta">
-                <img src="./bilder/karta.png" alt="">
+                <div id="map"></div>
             </section>
             <section class="favoLista">
                 <ul>

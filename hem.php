@@ -15,6 +15,9 @@ if (!isset($_SESSION["loggedin"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Startsida</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./css/mapbox.css">
 </head>
 
 <body>
@@ -32,7 +35,7 @@ if (!isset($_SESSION["loggedin"])) {
 
         <main class="hem">
             <section class="col3">
-                <img src="./bilder/karta.png" alt="">
+                <div id="map"></div>
             </section>
             <section class="col3">
                 <img src="./bilder/rev.png" alt="">
@@ -51,5 +54,6 @@ if (!isset($_SESSION["loggedin"])) {
         </main>
     </div>
 </body>
+<script src="./js/mapbox.js"></script>
 
 </html>

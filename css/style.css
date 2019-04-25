@@ -91,8 +91,8 @@ body .container header nav a.aktiv {
 body .container main.hem {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   margin: 50px;
   /* Hem css */
 }
@@ -143,8 +143,8 @@ body .container main.hem .drop .dropdown:hover .dropbtn {
 body .container main.favoMain {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   margin: 50px;
 }
 

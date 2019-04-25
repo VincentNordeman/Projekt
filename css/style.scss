@@ -55,10 +55,13 @@ body {
 
         main.hem {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr;
             margin: 50px;
 
-            .col3 {}
+            .col3 {
+            }
+
+
 
             /* Hem css */
             .drop {
@@ -110,7 +113,7 @@ body {
         /* Favo css */
         main.favoMain {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr;
             margin: 50px;
 
             li {
