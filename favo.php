@@ -24,8 +24,11 @@ if (!isset($_SESSION["loggedin"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Favorit</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mapbox.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body>
@@ -46,11 +49,11 @@ if (!isset($_SESSION["loggedin"])) {
                 <div id="map"></div>
             </section>
             <section class="favoLista">
-                <ul>
-                    <li>Grande</li>
-                    <li>Mamma Mia</li>
-                    <li>Subway</li>
-                </ul>
+                <div class="box">
+                    <h1>Mina platser</h1>
+                    <form class="platser"></form>
+                    <button>Spara</button>
+                </div>
             </section>
 
             <form action="#" method="post">
@@ -58,9 +61,8 @@ if (!isset($_SESSION["loggedin"])) {
                 <input id="lat" placeholder="Latitude" type="text" name="lat" required>
                 <input id="long" placeholder="Longitude" type="text" name="long" required>
                 <button>Registrera Restaurang</button>
-            </form>
 
-            <?php
+                <?php
 /* Ta emot data från form och lagra i tabellen. */
 if (isset($_POST["rnamn"]) && isset($_POST["lat"]) && isset($_POST["long"])) {
 
@@ -85,13 +87,15 @@ if (isset($_POST["rnamn"]) && isset($_POST["lat"]) && isset($_POST["long"])) {
     if (!$result) {
         die("Något blev fel sql-satsen; " . $conn->error);
     } else {
-        /* Alert när man lyckats skapa ett konto */
-        echo "<script>alert('Klappat & klart!')</script>";
+        /* Alert när man lyckats */
+        echo "<p class=\"animated bluebox heartBeat\">Klappat och klart!</p>";
     }
 }
 ?>
+            </form>
         </main>
     </div>
+    <script src="./js/mapbox.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ window.onload = start;
 function start() {
     const eLista = document.querySelector(".platser");
     const eKnapp = document.querySelector("button");
-    let url = "./spara4.php";
+    let url = "spara-karta.php";
     let index = 0;
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidmluY2VudG5vcmRlbWFuIiwiYSI6ImNqcGpvZDFmYTA4Ym0zcHFkMTQ0ZGtxM3YifQ.h6k8Y7CGTDvNoGwEKwNUyA';

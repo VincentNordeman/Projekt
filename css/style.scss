@@ -58,8 +58,8 @@ body {
             grid-template-columns: 1fr 1fr 1fr;
             margin: 50px;
 
-            .col3 {
-            }
+            /* .col3 {
+            } */
 
 
 
@@ -67,8 +67,8 @@ body {
             .drop {
 
                 .dropdown {
-                    position: relative;
-                    display: inline-block;
+                    margin: auto;
+                    width: 150px;
                 }
 
                 .dropbtn {
@@ -78,6 +78,7 @@ body {
                     font-size: 16px;
                     border: none;
                     width: 130px;
+                    align-items: center;
                 }
 
                 .dropdown-content {
@@ -116,14 +117,8 @@ body {
             grid-template-columns: 1fr 1fr 1fr;
             margin: 50px;
 
-            li {
-                color: $color4;
-                list-style-type: none;
-                font-size: 20px;
-            }
-
             form {
-                margin: 100px auto;
+                margin:auto;
                 width: 300px;
                 text-align: center;
 
@@ -137,13 +132,24 @@ body {
                 }
 
                 input {
-                    margin-top: 30px;
+                    margin-bottom: 30px;
                     display: block;
                     font-family: 'Noto Sans', sans-serif;
                     padding: 10px;
                     border: 1px solid $color1;
                     border-radius: 10px;
                     width: 100%;
+                }
+
+                .bluebox {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 18px;
+                    margin: 15px auto; 
+                    text-align: center;
+                    color: white;
+                    background-color: $color3;
+                    width: 200px;
+                    border-radius: 10px;
                 }
             }
         }

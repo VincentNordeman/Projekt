@@ -94,12 +94,14 @@ body .container main.hem {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   margin: 50px;
+  /* .col3 {
+            } */
   /* Hem css */
 }
 
 body .container main.hem .drop .dropdown {
-  position: relative;
-  display: inline-block;
+  margin: auto;
+  width: 150px;
 }
 
 body .container main.hem .drop .dropbtn {
@@ -109,6 +111,9 @@ body .container main.hem .drop .dropbtn {
   font-size: 16px;
   border: none;
   width: 130px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .container main.hem .drop .dropdown-content {
@@ -148,14 +153,8 @@ body .container main.favoMain {
   margin: 50px;
 }
 
-body .container main.favoMain li {
-  color: #d9c1b0;
-  list-style-type: none;
-  font-size: 20px;
-}
-
 body .container main.favoMain form {
-  margin: 100px auto;
+  margin: auto;
   width: 300px;
   text-align: center;
 }
@@ -170,13 +169,24 @@ body .container main.favoMain form button {
 }
 
 body .container main.favoMain form input {
-  margin-top: 30px;
+  margin-bottom: 30px;
   display: block;
   font-family: 'Noto Sans', sans-serif;
   padding: 10px;
   border: 1px solid #1c3030;
   border-radius: 10px;
   width: 100%;
+}
+
+body .container main.favoMain form .bluebox {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  margin: 15px auto;
+  text-align: center;
+  color: white;
+  background-color: #485b5b;
+  width: 200px;
+  border-radius: 10px;
 }
 
 body .container main.registrera form {

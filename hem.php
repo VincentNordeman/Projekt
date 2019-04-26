@@ -53,7 +53,7 @@ if (!isset($_SESSION["loggedin"])) {
             </section>
         </main>
     </div>
+    <script src="./js/mapbox.js"></script>
 </body>
-<script src="./js/mapbox.js"></script>
 
 </html>

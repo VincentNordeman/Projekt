@@ -32,9 +32,6 @@ ul {
 .box {
     background: rgba(0, 0, 0, 0.664);
     color: #FFF;
-    position: absolute;
-    top: 20px;
-    left: 20px;
     padding: 20px;
     border-radius: 5px;
     width: 350px;
